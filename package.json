@@ -16,6 +16,9 @@
 		"node": ">=6"
 	},
 	"scripts": {
+
+		"test": "stylelint *.css"
+ opinionated-base
 		"test": "npm run test:stylelint",
 		"test:all": "npm run test:stylelint && npm run test:chrome && npm run test:firefox && npm run test:safari",
 		"test:stylelint": "stylelint modern-normalize.css",
@@ -23,9 +26,11 @@
 		"test:firefox": "testcafe firefox:headless test/acceptance/firefox --app \"http-server . --silent\"",
 		"test:safari": "testcafe safari test/acceptance/safari --app \"http-server . --silent\"",
 		"version": "replace-in-files --regex='v\\d+\\.\\d+\\.\\d+' --replacement=v$npm_package_version modern-normalize.css && git add ."
+ opinionated-base
 	},
 	"files": [
-		"modern-normalize.css"
+		"modern-normalize.css",
+		"modern-base.css"
 	],
 	"keywords": [
 		"normalize",
@@ -44,9 +49,16 @@
 	"stylelint": {
 		"extends": "stylelint-config-xo",
 		"rules": {
+
+      "font-family-no-duplicate-names": null,
+			"no-duplicate-selectors": null,
+			"selector-no-vendor-prefix": null,
+			"media-feature-name-no-vendor-prefix": null
+ opinionated-base
 			"no-duplicate-selectors": null,
 			"no-descending-specificity": null,
 			"property-no-vendor-prefix": null
+  opinionated-base
 		}
 	}
 }

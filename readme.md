@@ -71,11 +71,20 @@ or
 <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
 ```
 
+opinionated-base
+This package also includes a base style with better defaults:
+
+```css
+@import 'node_modules/modern-normalize/modern-base.css';
+```
+
+opinionated-base
 ## FAQ
 
 ### Can you provide Sass, Less, etc, ports?
 
 There's absolutely no reason to have separate ports for these. They are just CSS supersets and can import CSS directly.
+opinionated-base
 
 ## Related
 
